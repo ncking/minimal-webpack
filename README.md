@@ -2,7 +2,7 @@
 
 ## Instructions
 
-- Clone repo - `git clone git@github.com:ncking/minimal-webpack.git`
+- Clone repo - `git clone https://github.com/ncking/minimal-webpack.git`
 - Change to the cloned repo's folder - `cd minimal-webpack`
 - Install dependencies - `npm i`
 - Start the dev server - `npm dev`
