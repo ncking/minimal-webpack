@@ -1,5 +1,5 @@
 # Minimalist Webpack Boilerplate
-Boilerplate project for code assesments
+Boilerplate project for code assessments
 
 ## Instructions
 
