@@ -7,9 +7,9 @@ const PATH_SRC = resolve('./src')
 const PATH_PUBLIC = resolve('./public')
 
 export default {
-  entry: `${PATH_SRC}/index.js`,
+  entry: `${PATH_SRC}/index.jsx`,
   mode: env,
-
+  target: 'web',
   output: {
     clean: true
   },
@@ -24,20 +24,31 @@ export default {
     port: 3001,
   },
 
+  resolve: {
+    modules: ['./src', './node_modules'],
+    extensions: ['*', '.js', '.jsx', '.ts', '.tsx', '.css', '.scss'],
+    alias: {},
+  },
+
   module: {
     rules: [{
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: 'babel-loader'
-      },
-      {
-        test: /\.(sa|sc|c)ss$/,
-        use: [
-          env == 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader',
-        ]
-      }
+      test: /\.(js|jsx)$/,
+      exclude: /node_modules/,
+      use: 'babel-loader'
+    },
+    {
+      test: /\.(sa|sc|c)ss$/,
+      use: [
+        env == 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
+        {
+          loader: "css-loader",
+          options: {
+            url: false, // disable resolving image urls
+          },
+        },
+        'sass-loader',
+      ]
+    }
     ]
   },
 
