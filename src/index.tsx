@@ -3,4 +3,4 @@ import App from './app';
 import './index.scss';
 
 const el = document.getElementById('app');
-createRoot(el).render(<App />);
+createRoot(el as HTMLDivElement).render(<App />);

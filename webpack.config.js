@@ -7,7 +7,7 @@ const PATH_SRC = resolve('./src')
 const PATH_PUBLIC = resolve('./public')
 
 export default {
-  entry: `${PATH_SRC}/index.jsx`,
+  entry: `${PATH_SRC}/index.tsx`,
   mode: env,
   target: 'web',
   output: {
@@ -32,7 +32,7 @@ export default {
 
   module: {
     rules: [{
-      test: /\.(js|jsx)$/,
+      test: /\.(js|ts)x?$/,
       exclude: /node_modules/,
       use: 'babel-loader'
     },

@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "target": "es2021",
+    "module": "es2022",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": [
+      "webworker",
+      "dom",
+      "es2022"
+    ],
+    "declaration": false, 
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "strict": true, 
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true,
+    // "noImplicitUseStrict": true,
+    "allowJs": true,
+    "checkJs": true,
+    "downlevelIteration": true,
+    "declarationMap": false,
+    "sourceMap": false,
+    "baseUrl": "./",
+    "paths": {
+    },
+    "typeRoots": [
+      "./global.d.ts",
+      "./node_modules/@types"
+    ]
+  },
+  "include": [
+    "./src",
+    "./global.d.ts"
+  ],
+  "exclude": [
+    "*.scss",
+    "./**/dist",
+    "node_modules"
+  ]
+}
